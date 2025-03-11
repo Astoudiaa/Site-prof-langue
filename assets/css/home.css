@@ -67,9 +67,11 @@ body {
 }
 
 .quote {
-    font-size: 28px;
-    font-style: italic;
-    margin-bottom: 20px;
+    font-family: "Italianno", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    
 }
 
 .author {
