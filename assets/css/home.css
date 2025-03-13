@@ -23,7 +23,7 @@ body {
 }
 
 .logo img {
-    height: 90px;
+    height: 180px;
     width: auto;
 }
 
@@ -61,6 +61,11 @@ body {
     background-color: #333;
 }
 
+.main-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 .quote-section {
     text-align: center;
     padding: 50px 20px;
@@ -70,8 +75,7 @@ body {
     font-family: "Italianno", cursive;
     font-weight: 400;
     font-style: normal;
-    font-size: 40px;
-    
+    font-size: 60px;
 }
 
 .author {
@@ -91,32 +95,32 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 25%; /* Ajuste la largeur */
+   
     text-align: center;
-    background-color: #f5f0e8;
+    background-color:rgb(241, 226, 197) ;
+
+    
     padding: 20px;
     border-radius: 10px;
-    
 }
-
-
 
 .gallery-image {
     width: 300px; /* Taille fixe pour la largeur */
     height: 400px; /* Taille fixe pour la hauteur */
-    object-fit: cover; /* Cette propriété permet à l'image de remplir l'espace sans déformer, en coupant éventuellement une partie de l'image */
-    border-radius: 10px; /* Coins arrondis */
+    object-fit: cover; /* permet à l'image de remplir l'espace sans déformer, en coupant éventuellement une partie de l'image */
+    border-radius: 5px; /* Coins arrondis */
+   
 }
-
-
 .gallery-title {
     font-size: 18px;
     font-weight: bold;
     margin-top: 15px;
     text-decoration: underline;
     cursor: pointer;
-    
-
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
 }
 
 .detail-button {
@@ -128,10 +132,125 @@ body {
     border: 2px solid black;
     border-radius: 40px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
 }
 
 .detail-button:hover {
-    background-color: #582900;
+    background-color: #ebcfb7;
     color: white;
+}
+
+a {
+    color: black; /* Couleur par défaut */
+    text-decoration: none; /* Supprime le soulignement */
+}
+
+a:hover {
+    color: hsl(28, 100%, 17%); /* Couleur au survol */
+}
+
+a:visited {
+    color: black; /* Couleur après la visite */
+}
+
+/* Pour les écrans plus petits (tablettes ou mobiles) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Empile le contenu */
+        gap: 15px;
+        margin: 10px;
+    }
+
+    .navigation {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .gallery {
+        flex-direction: column; /* Empile les éléments de la galerie */
+        align-items: center;
+    }
+
+    .gallery-item {
+        width: 80%; /* Réduit la largeur des éléments */
+        padding: 15px;
+    }
+
+    .gallery-image {
+        width: 100%; /* Redimensionne l'image */
+        height: auto; /* Ajuste la hauteur automatiquement */
+        width: 300px;
+        height: auto;
+        transition: opacity 0.3s ease;
+    }
+
+    .quote {
+        font-size: 40px; /* Réduit la taille de la citation */
+    }
+
+    .reserve-button {
+        font-size: 16px;
+    }
+}
+
+/* Pour les très petits écrans (mobiles) */
+@media (max-width: 480px) {
+    .gallery-item {
+        width: 90%; /* Éléments de galerie prennent presque toute la largeur */
+        padding: 10px;
+    }
+
+    .gallery-image {
+        width: 100%; /* L'image prend toute la largeur disponible */
+        height: auto; /* Ajuste la hauteur en conséquence */
+    }
+
+    .quote {
+        font-size: 30px; /* Réduit encore la taille de la citation */
+    }
+
+    .navigation a {
+        font-size: 16px; /* Réduit la taille des liens */
+    }
+
+    .reserve-button {
+        font-size: 14px;
+    }
+}
+
+/* Carrousel */
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  animation: slide 15s infinite; /* Le temps du défilement, ici 15 secondes */
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-100%);
+  }
+  40% {
+    transform: translateX(-200%);
+  }
+  60% {
+    transform: translateX(-300%);
+  }
+  80% {
+    transform: translateX(-400%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

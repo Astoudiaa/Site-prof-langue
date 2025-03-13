@@ -1,0 +1,41 @@
+@use 'sass:math'; // Ajoute ceci au début de ton fichier SCSS
+
+$img: 10;
+$rotateStep: math.div(360, $img);  // Utilisation de math.div()
+$rotate: 0;
+
+body, html {
+  margin: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+#imgs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+  transform-origin: 0 0 -50vw;
+}
+
+#imgs img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20vw;
+  transform-origin: 50% 50% -50vw;
+  transform: translate3d(-50%, -50%, 0);
+  transform-style: preserve-3d;
+}
+
+@for $i from 0 through $img {
+  $rotate: $rotateStep * $i;
+  #imgs img:nth-child(#{$i + 1}) {
+    transform: translate3d(-50%, -50%, 0) rotate3d(0, 1, 0, $rotate + deg);
+  }
+}
