@@ -18,6 +18,7 @@ body {
    
    .header {
     display: flex;
+    font-family: italianno;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
@@ -92,16 +93,37 @@ body {
    }
    
    .bio {
-    background-color: #e9d9be;
+    background-color:#e9d9be;
     padding: 30px;
+    width: 600px;
     font-size: 18px;
     line-height: 1.6;
+    margin: 30px auto;
+    position: relative; 
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    margin-bottom: 400px;
+    align-items: center;
+    overflow: visible;
+  }
+  
+  .bio::after {
+    content: "";
+    position: absolute;
+    top: 75%;
+    left: -160px; 
+    width: 295px; /* pour aggrandir taille image*/
+    height: 330px; /* pour aggrandir taille image*/
     border-radius: 5px;
-    margin-bottom: 30px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-   }
+    background-image: url("../img/Dalila.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+   
+  
+    z-index: 1;
+  }
    
    .parcours{
   display: flex; /* Utilise flexbox pour les éléments à côté */
@@ -115,29 +137,59 @@ body {
   margin-bottom: 30px;
   max-width: 800px;
   margin-left: auto;
-  margin-right: auto;
-   }
+  margin-right: auto; }
 
-   .photos {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 30px;
-   }
-   
-   .photo-container {
-    max-width: 350px;
-    
-   }
-   
-   .photo {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    object-fit: cover;
-    max-height: 350px;
-   }
-   
+  .parcours::after {*/
+  background-image: url("../img/salleclasse.jpeg");
+  transition: all .5s ease;
+  background-repeat: no-repeat;
+  background-position: center; 
+   content: "";
+   position: absolute;
+   top: 75%;
+   left: -160px; 
+   width: 295px; /* pour aggrandir taille image*/
+    /*height: 330px; /* pour aggrandir taille image*/
+   border-radius: 5px;
+   background-size: cover; 
+    } 
+    .presentation {
+      display: flex;
+      align-items: center; /* Centre verticalement */
+      justify-content: flex-end; /* Aligne tout à droite */
+      background-color: #e9d9be;
+      padding: 30px;
+      font-size: 18px;
+      line-height: 1.6;
+      border-radius: 5px;
+      margin-bottom: 30px;
+      max-width: 800px;
+      margin-right: 0; /* Colle à droite */
+      margin-left: auto;
+      margin-top: -130px; /* Ajuste cette valeur pour monter le bloc */
+  }
+  
+  .photo-container {
+    width: 100%; /* Le container prend toute la largeur disponible */
+    max-width: 500px; /* Limite la largeur du conteneur */
+    height: auto; /* Laisse la hauteur s'adapter selon l'image */
+    overflow: hidden; /* Cache les parties de l'image qui débordent */
+    border-radius: 5px; /* Coins arrondis pour le conteneur */
+    display: flex; /* Centrer l'image à l'intérieur du conteneur */
+    justify-content: center; /* Centre l'image horizontalement */
+    align-items: center; /* Centre l'image verticalement */
+}
+
+.photo-classe {
+    width: 100%; /* L'image occupe toute la largeur du conteneur */
+   /* height: auto;  Laisse la hauteur s'ajuster automatiquement en fonction de la largeur */
+    object-fit: contain; /* Assure que l'image conserve son ratio sans déformation */
+    border-radius: 5px; /* Coins arrondis pour l'image */
+    transition: all .5s ease; /* Effet de transition pour les modifications */
+    object-position: 60% -50px; 
+}
+
+  
    /* Media Queries */
    @media (max-width: 768px) {
     .header {
@@ -160,3 +212,15 @@ body {
       margin-bottom: 20px;
     }
    }
+   /* Animation d'apparition */
+.fade-in {
+  opacity: 0;  /* L'élément commence invisible */
+  transform: translateY(50px);  /* L'élément commence un peu plus bas */
+  transition: opacity 0.5s ease, transform 0.5s ease;  /* Transition en douceur */
+}
+
+/* Classe qui s'applique lorsque l'élément devient visible */
+.fade-in.visible {
+  opacity: 1;  /* Rendre l'élément visible */
+  transform: translateY(0);  /* Remettre l'élément à sa position d'origine */
+}

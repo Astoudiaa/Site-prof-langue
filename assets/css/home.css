@@ -10,21 +10,35 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    border: 1px solid #333;
-    margin: 20px;
+    padding: 5px 20px; /* Réduit l’espace autour du header */
+    margin: 10px 20px; /* Réduit l’espace extérieur */
     background-color: #f0e9e1;
 }
-
 .logo {
     display: flex;
-    justify-content: center;
-    width: 100%;
+    justify-content: left;
+    width: 40%;
+   
+   
 }
 
 .logo img {
-    height: 180px;
+    height: 150px;
     width: auto;
+    border-radius: 20px;
+    transition: all .5s ease;
+    
+}
+
+.title {
+    font-size: 600x;
+    font-family: "Italianno", cursive;
+    font-weight: 400; /* Force la suppression du gras */
+    text-align: center;
+    color: #DAA520;
+    display: flex;
+    flex: content;
+    
 }
 
 .reserve-button {
@@ -40,8 +54,9 @@ body {
     display: flex;
     justify-content: center;
     gap: 50px;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin-top: -50px;
+ 
+    
 }
 
 .navigation a {
@@ -49,6 +64,7 @@ body {
     color: #333;
     font-size: 18px;
     position: relative;
+    
 }
 
 .navigation a.active::after {
@@ -69,6 +85,11 @@ body {
 .quote-section {
     text-align: center;
     padding: 50px 20px;
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .quote {
@@ -76,30 +97,30 @@ body {
     font-weight: 400;
     font-style: normal;
     font-size: 60px;
+    
+  
 }
 
 .author {
     text-align: right;
     max-width: 800px;
     margin: 0 auto;
+    margin-right: 400px ;
+
 }
 
 .gallery {
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin: 50px 20px;
+    margin-top: 150px;
 }
 
 .gallery-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-   
     text-align: center;
-    background-color:rgb(241, 226, 197) ;
-
-    
     padding: 20px;
     border-radius: 10px;
 }
@@ -109,38 +130,45 @@ body {
     height: 400px; /* Taille fixe pour la hauteur */
     object-fit: cover; /* permet à l'image de remplir l'espace sans déformer, en coupant éventuellement une partie de l'image */
     border-radius: 5px; /* Coins arrondis */
+    transition: all .5s ease;
+
    
 }
+.gallery-image:hover { 
+    transform: scale(1.1);
+
+
+}
+
 .gallery-title {
     font-size: 18px;
-    font-weight: bold;
+    /*font-weight: bold;*/
+    color: #DAA520;
     margin-top: 15px;
     text-decoration: underline;
     cursor: pointer;
-    font-family: "Cinzel", serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal !important;
+    /*font-style: normal;*/
 }
 
 .detail-button {
     margin-top: 10px;
     padding: 8px 20px;
     font-size: 16px;
-    background-color: white;
-    color: black;
-    border: 2px solid black;
-    border-radius: 40px;
+    border: 2px solid #DAA520;
     cursor: pointer;
+    border-radius: 10px;
+    width: 300px
 }
 
 .detail-button:hover {
     background-color: #ebcfb7;
-    color: white;
+  
 }
 
 a {
-    color: black; /* Couleur par défaut */
+    color:  #DAA520; /* Couleur par défaut */
     text-decoration: none; /* Supprime le soulignement */
 }
 
@@ -148,9 +176,7 @@ a:hover {
     color: hsl(28, 100%, 17%); /* Couleur au survol */
 }
 
-a:visited {
-    color: black; /* Couleur après la visite */
-}
+
 
 /* Pour les écrans plus petits (tablettes ou mobiles) */
 @media (max-width: 768px) {
