@@ -17,15 +17,21 @@ body {
   background-color: #f0e9e1;
   color: #333;
 }
-/*.text-container { 
+.text-container { 
   font-family: "Italianno", cursive;
-  font-weight: 400;
     font-style: normal;
     font-size: 50px;
     display: flex;
     justify-content: center;
-    height: 90vh;
-}*/
+ 
+}
+.text-acceuil {   
+  font-family: fantasy;
+  font-style: normal;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
 .header {
   display: flex;
   justify-content: space-between;
