@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - French Class in Paris</title>
+    
+    <link rel="stylesheet" href="/assets/css/home.css?v=1.1">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Italiana&family=Italianno&display=swap');
+    </style>           
+</head>
+<body>
+
+    <%- include("partials/header") %> <!-- Inclusion du header -->
+
+    <main>
+        <div class="quote-section">
+            <div class="quote">"Ma vocation, votre apprentissage."</div>
+            <div class="author">— Dalila R...</div>
+        </div>
+
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="/img/Dalila-profil.jpeg" alt="Dalila dans un jardin">
+                <h3 class="gallery-title"><a href="/propos">À propos de moi</a></h3>
+                <button class="detail-button"><a href="/propos">En savoir plus</a></button>
+            </div>
+            <div class="gallery-item">
+                <img src="/img/cours-individuel.jpeg" alt="cours individuel" class="gallery-image">
+                <h3 class="gallery-title">Cours - Tarifs</h3>
+                <button class="detail-button"><a href="/prestation">En savoir plus</a></button>
+            </div>
+            <div class="gallery-item">
+                <img src="/img/cours-gouter.jpeg" alt="Session d'apprentissage" class="gallery-image">
+                <h3 class="gallery-title">Expériences uniques</h3>
+                <button class="detail-button"><a href="/experiences">En savoir plus</a></button>
+            </div>
+        </div>
+    </main>
+
+    <%- include("partials/footer") %> <!-- Inclusion du footer -->
+
+    <script src="/js/home.js"></script>
+</body>
+</html>
