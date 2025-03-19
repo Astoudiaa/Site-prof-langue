@@ -8,7 +8,7 @@ body {
 
    }
 
-   .italianno-regular {
+   .italianno-regular {/*police*/
     font-family: "Italianno", cursive;
     font-weight: 400;
     font-style: normal;
@@ -16,26 +16,30 @@ body {
     
   }
    
-   .header {
+  .header {
     display: flex;
-    font-family: italianno;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    margin: 20px;
+    padding: 5px 20px; /* Réduit l’espace autour du header */
+    margin: 10px 20px; /* Réduit l’espace extérieur */
     background-color: #f0e9e1;
-   }
+}
    
-   .logo {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-   }
+.logo {
+  display: flex;
+  justify-content: left;
+  width: 40%;
+ 
+ 
+}
    
-   .logo img {
-    height: 90px;
-    width: auto;
-   }
+.logo img {
+  height: 150px;
+  width: auto;
+  border-radius: 20px;
+  transition: all .5s ease;
+  
+}
    
    .reserve-button {
     border: 1px solid #333;
@@ -46,13 +50,15 @@ body {
     cursor: pointer;
    }
    
-   .navigation {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    margin-top: 20px;
-    margin-bottom: 30px;
-   }
+ 
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: -50px;
+
+  
+}
    
    .navigation a {
     text-decoration: none;
