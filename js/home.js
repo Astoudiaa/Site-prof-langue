@@ -15,3 +15,5 @@ setInterval(function() {
   currentImageIndex = (currentImageIndex + 1) % images.length;  // Change d'image (cycle)
   document.getElementById('image').src = images[currentImageIndex];  // Met à jour l'image
 }, 1500);  // 1500 millisecondes = 1,5 secondes
+
+

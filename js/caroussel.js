@@ -166,3 +166,15 @@ window.onload = function () {
     }, 1000);
   }
 };
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const slides = document.querySelectorAll(".carousel-slide");
+
+  slides.forEach((slide, index) => {
+      setTimeout(() => {
+          slide.classList.add("loaded");
+      }, index * 300); // Effet progressif
+  });
+});

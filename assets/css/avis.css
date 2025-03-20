@@ -80,6 +80,7 @@ body {
     transform: translateY(5px);
 }
 
+
 .title::before, .title::after {
     content: '♦';
     font-size: 18px;

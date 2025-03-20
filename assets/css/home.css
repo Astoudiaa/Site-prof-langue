@@ -1,282 +1,337 @@
+/* Base styles */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', Times, serif;
-    background-color: #f0e9e1;
-    color: #333;
-}
-
-.header {
+    font-family: 'Playfair Display', 'Times New Roman', serif;
+    background: linear-gradient(145deg, #f5eee5 0%, #e6d5c3 100%);
+    color: #54483e;
+    line-height: 1.6;
+  }
+  
+  /* Header with transparent background */
+  header {
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Navigation styles with transparent background */
+  .navigation {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 20px; /* Réduit l’espace autour du header */
-    margin: 10px 20px; /* Réduit l’espace extérieur */
-    background-color: #f0e9e1;
-}
-.logo {
-    display: flex;
-    justify-content: left;
-    width: 40%;
-   
-   
-}
-
-.logo img {
-    height: 150px;
-    width: auto;
-    border-radius: 20px;
-    transition: all .5s ease;
-    
-}
-
-.title {
-    font-size: 600x;
-    font-family: "Italianno", cursive;
-    font-weight: 400; /* Force la suppression du gras */
-    text-align: center;
-    color: #DAA520;
-    display: flex;
-    flex: content;
-    
-}
-
-.reserve-button {
-    border: 1px solid #333;
-    padding: 15px 30px;
-    border-radius: 10px;
-    font-size: 18px;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-.navigation {
-    display: flex;
+    gap: 30px;
     justify-content: center;
-    gap: 50px;
-    margin-top: -50px;
- 
-    
-}
-
-.navigation a {
+    padding: 20px 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+  }
+  
+  .navigation a {
     text-decoration: none;
-    color: #333;
-    font-size: 18px;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
     position: relative;
-    
-}
-
-.navigation a.active::after {
+    padding: 5px 0;
+    transition: color 0.3s ease;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  .navigation a::before {
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #d4af37, transparent);
+    transition: width 0.4s ease;
+  }
+  
+  .navigation a:hover {
+    color: #d4af37;
+  }
+  
+  .navigation a:hover::before {
+    width: 100%;
+  }
+  
+  .navigation a.active {
+    color: #d4af37;
+    font-weight: 600;
+  }
+  
+  .navigation a.active::before {
+    width: 100%;
+    background: linear-gradient(to right, transparent, #d4af37, transparent);
+  }
+  
+  /* Menu toggle for mobile */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 10;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    border-radius: 3px;
+    transition: 0.3s;
+  }
+  
+  /* Hero section styles */
+  .hero-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .hero-bg {
+    position: absolute;
+    top: 0;
     left: 0;
     width: 100%;
-    height: 1px;
-    background-color: #333;
-}
-
-.main-content {
-    padding: 20px;
+    height: 100%;
+    background-image: url('../img/tour-eiffeil.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.7);
+    z-index: -1;
+  }
+  
+  .hero-content {
+    padding: 2rem;
+    max-width: 800px;
+    z-index: 2;
+    margin-top: 60px;
+  }
+  
+  .hero-title {
+    font-family: 'Cinzel', serif;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  .hero-subtitle {
+    font-family: 'Italiana', serif;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  }
+  
+  .hero-button {
+    background-color: #d4af37;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 30px;
+    font-family: 'Italiana', serif;
+    transition: all 0.3s ease;
+  }
+  
+  .hero-button:hover {
+    background-color: #c39e0d;
+    transform: scale(1.05);
+  }
+  
+  /* Main content styling */
+  main {
     max-width: 1200px;
-    margin: 0 auto;
-}
-.quote-section {
+    margin: 2rem auto;
+    padding: 0 2rem;
+  }
+  
+  .quote-section {
     text-align: center;
     padding: 50px 20px;
     display: flex;
-    flex-direction:column ;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-
-}
-
-.quote {
+  }
+  
+  .quote {
     font-family: "Italianno", cursive;
     font-weight: 400;
     font-style: normal;
     font-size: 60px;
-    
+  }
   
-}
-
-.author {
+  .author {
     text-align: right;
     max-width: 800px;
     margin: 0 auto;
-    margin-right: 400px ;
-
-}
-
-.gallery {
+    margin-right: 400px;
+  }
+  
+  .gallery {
     display: flex;
     justify-content: center;
     gap: 30px;
     margin-top: 150px;
-}
-
-.gallery-item {
+  }
+  
+  .gallery-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 20px;
     border-radius: 10px;
-}
-
-.gallery-image {
-    width: 300px; /* Taille fixe pour la largeur */
-    height: 400px; /* Taille fixe pour la hauteur */
-    object-fit: cover; /* permet à l'image de remplir l'espace sans déformer, en coupant éventuellement une partie de l'image */
-    border-radius: 5px; /* Coins arrondis */
+  }
+  
+  .gallery-image {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
     transition: all .5s ease;
-
-   
-}
-.gallery-image:hover { 
+  }
+  
+  .gallery-image:hover {
     transform: scale(1.1);
-
-
-}
-
-.gallery-title {
+  }
+  
+  .gallery-title {
     font-size: 18px;
-    /*font-weight: bold;*/
     color: #DAA520;
     margin-top: 15px;
     text-decoration: underline;
     cursor: pointer;
     font-family: 'Times New Roman', Times, serif;
     font-weight: normal !important;
-    /*font-style: normal;*/
-}
-
-.detail-button {
-    margin-top: 10px;
-    padding: 8px 20px;
-    font-size: 16px;
-    border: 2px solid #DAA520;
-    cursor: pointer;
-    border-radius: 10px;
-    width: 300px
-}
-
-.detail-button:hover {
-    background-color: #ebcfb7;
+  }
   
-}
-
-a {
-    color:  #DAA520; /* Couleur par défaut */
-    text-decoration: none; /* Supprime le soulignement */
-}
-
-a:hover {
-    color: hsl(28, 100%, 17%); /* Couleur au survol */
-}
-
-
-
-/* Pour les écrans plus petits (tablettes ou mobiles) */
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column; /* Empile le contenu */
-        gap: 15px;
-        margin: 10px;
+  .gallery-title a {
+    color: #DAA520;
+    text-decoration: none;
+  }
+  
+  .detail-button {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+    transition: transform 0.3s;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 8px 16px;
+  }
+  
+  .detail-button:hover {
+    transform: translateY(-5px);
+  }
+  
+  .detail-button a {
+    color: #C4A484;
+    text-decoration: none;
+  }
+  
+  .detail-button a:hover {
+    color: hsl(28, 100%, 17%);
+  }
+  
+  /* Footer styling */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(212, 175, 55, 0.1);
+    margin-top: 50px;
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (max-width: 768px) {
+    .hero-section {
+      height: 80vh;
     }
-
+    
+    .hero-title {
+      font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.2rem;
+    }
+    
+    .hero-button {
+      padding: 10px 25px;
+      font-size: 1rem;
+    }
+  
     .navigation {
-        flex-wrap: wrap;
-        gap: 20px;
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 60px 0 20px;
     }
-
+    
+    .navigation.responsive {
+      display: flex;
+    }
+    
+    .menu-toggle {
+      display: flex;
+    }
+    
     .gallery {
-        flex-direction: column; /* Empile les éléments de la galerie */
-        align-items: center;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 80px;
     }
-
+  
     .gallery-item {
-        width: 80%; /* Réduit la largeur des éléments */
-        padding: 15px;
+      width: 80%;
     }
-
-    .gallery-image {
-        width: 100%; /* Redimensionne l'image */
-        height: auto; /* Ajuste la hauteur automatiquement */
-        width: 300px;
-        height: auto;
-        transition: opacity 0.3s ease;
-    }
-
+  
     .quote {
-        font-size: 40px; /* Réduit la taille de la citation */
+      font-size: 40px;
     }
-
-    .reserve-button {
-        font-size: 16px;
+    
+    .author {
+      margin-right: 0;
     }
-}
-
-/* Pour les très petits écrans (mobiles) */
-@media (max-width: 480px) {
+  }
+  
+  @media (max-width: 480px) {
     .gallery-item {
-        width: 90%; /* Éléments de galerie prennent presque toute la largeur */
-        padding: 10px;
+      width: 90%;
     }
-
+  
     .gallery-image {
-        width: 100%; /* L'image prend toute la largeur disponible */
-        height: auto; /* Ajuste la hauteur en conséquence */
+      width: 100%;
+      height: auto;
+      max-height: 300px;
     }
-
+  
     .quote {
-        font-size: 30px; /* Réduit encore la taille de la citation */
+      font-size: 30px;
     }
-
+    
     .navigation a {
-        font-size: 16px; /* Réduit la taille des liens */
+      font-size: 16px;
     }
-
-    .reserve-button {
-        font-size: 14px;
-    }
-}
-
-/* Carrousel */
-.carousel-container {
-  width: 100%;
-  overflow: hidden;
-}
-
-.carousel {
-  display: flex;
-  animation: slide 15s infinite; /* Le temps du défilement, ici 15 secondes */
-}
-
-.carousel-image {
-  width: 100%;
-  height: auto;
-  flex-shrink: 0;
-}
-
-@keyframes slide {
-  0% {
-    transform: translateX(0);
   }
-  20% {
-    transform: translateX(-100%);
-  }
-  40% {
-    transform: translateX(-200%);
-  }
-  60% {
-    transform: translateX(-300%);
-  }
-  80% {
-    transform: translateX(-400%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
