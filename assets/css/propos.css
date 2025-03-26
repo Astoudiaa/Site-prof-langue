@@ -164,17 +164,34 @@ main {
   padding: 0 2rem;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
 .text {
   text-align: center;
+   border-radius: 8px;
   padding: 40px 20px 20px;
   color: black;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  position: relative;
+  background-color: white;
 }
 
 .text h1 {
-  font-family: 'Cinzel', serif;
-  font-size: 42px;
-  color:black;
-  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+  
+  font-weight: 500;
 }
 
 .text-propos {
@@ -195,6 +212,7 @@ main {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   text-align: center;
   position: relative;
+  font-family: 'Playfair Display', serif;
 }
 
 .bio p {
@@ -221,6 +239,7 @@ main {
 .presentation {
   
   padding: 2rem;
+  font-family: 'Playfair Display', serif;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -228,11 +247,30 @@ main {
   margin: 3rem 0 3rem 5rem; /* 5rem de marge à gauche */
 }
 
+.presentation:after {
+  content: "";
+  position: absolute;
+  top: 90%; /* Descend l'image */
+  right: -160px; 
+  width: 295px;
+  height: 330px;
+  border-radius: 5px;
+  background-image: url("../img/Dalila-profil.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+}
+
+
 .presentation p {
   font-size: 1rem;
   text-align: justify;
   color: #444;
 }
+
+
+
 
 /* Photo styles */
 .photo-container {
@@ -262,49 +300,53 @@ main {
 /* Parcours sections */
 .parcours {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #f0e6dd;
+  font-family: 'Playfair Display', serif;
+  position: absolute;
+  background-color: white;
   padding: 30px;
   font-size: 18px;
   line-height: 1.6;
   border-radius: 8px;
   margin-bottom: 30px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: -50px;
+  position: relative;
+  transform: translateX(-70px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .parcours-bis {
-  background-color: #e7d0ae;
+  background-color: white;
+  font-family: 'Playfair Display', serif;
   padding: 30px;
   font-size: 18px;
   line-height: 1.6;
   border-radius: 8px;
   margin-bottom: 30px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  position: relative;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .parcours-pro {
-  background-color: #f5eee5;
+  background-color:white;
   padding: 30px;
   font-size: 18px;
   line-height: 1.6;
+  font-family: 'Playfair Display', serif;
   border-radius: 8px;
   margin-bottom: 30px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  position: relative;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
+
+
+
+
+
 
 .parcours-pro ul {
   list-style-type: none;
   padding-left: 1rem;
+  
 }
 
 .parcours-pro li {
@@ -317,11 +359,12 @@ main {
   content: "♦";
   position: absolute;
   left: 0;
-  color: #c9a76d;
+
 }
 
 .parcours-perso, .parcours-perso-bis {
-  background-color: #f0e6dd;
+  background-color:white;
+  font-family: 'Playfair Display', serif;
   padding: 30px;
   font-size: 18px;
   line-height: 1.6;
@@ -334,7 +377,7 @@ main {
 }
 
 .parcours-perso-bis {
-  background-color: #e7d0ae;
+  background-color: white;
 }
 
 /* Animation styles */

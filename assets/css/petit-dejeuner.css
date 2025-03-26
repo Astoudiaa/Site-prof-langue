@@ -1,38 +1,27 @@
+/* Base styles */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Playfair Display', 'Times New Roman', serif;
-    background: linear-gradient(145deg, #f5f0e6 0%, #e6d7c3 100%);
-    color: #333;
+    background: linear-gradient(145deg, #f5eee5 0%, #e6d5c3 100%);
+    color: #54483e;
     line-height: 1.6;
-}
-
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0;
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(8px);
-    border-radius: 25px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-/* Header élégant avec animation */
-.header {
+    
+  }
+  
+  /* Header styles */
+  .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
-    background: linear-gradient(135deg, #f0e9e1 0%, #ebce98 100%);
-    border-bottom: 1px solid rgba(218, 165, 32, 0.3);
+    background: linear-gradient(135deg, #f0e6dd 0%, #e7d0ae 100%);
+    border-bottom: 1px solid rgba(184, 134, 11, 0.3);
     position: relative;
     overflow: hidden;
-}
-
-.header::before {
+  }
+  
+  .header::before {
     content: '';
     position: absolute;
     top: -50%;
@@ -42,62 +31,70 @@ body {
     background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 60%);
     animation: shimmer 8s infinite linear;
     pointer-events: none;
-}
-
-@keyframes shimmer {
+  }
+  
+  @keyframes shimmer {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
-}
-
-.logo {
+  }
+  
+  
+  /* Navigation styles */
+  .navigation {
     display: flex;
-    align-items: center;
+    gap: 30px;
+    justify-content: center;
+    margin-left: auto;
+  }
+  
+  .navigation a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    font-weight: 500;
     position: relative;
-    z-index: 2;
-}
-
-.logo img {
-    height: 120px;
-    width: auto;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.logo img:hover {
-    transform: translateY(-5px) rotate(3deg);
-    box-shadow: 0 8px 20px rgba(218, 165, 32, 0.4);
-}
-
-.title {
-    font-family: "Italianno", "Tangerine", cursive;
-    font-size: 60px;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+  }
+  
+  .navigation a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #c9a76d, transparent);
+    transition: width 0.4s ease;
+  }
+  
+  .navigation a:hover {
     color: #b8860b;
-    text-align: center;
-    position: relative;
-    margin: 0 auto;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    transform: translateY(5px);
-}
-
-
-.title::before, .title::after {
-    content: '♦';
-    font-size: 18px;
-    color: #DAA520;
-    margin: 0 15px;
-    vertical-align: middle;
-    opacity: 0.7;
-}
-
-.reserve-button {
+  }
+  
+  .navigation a:hover::before {
+    width: 100%;
+  }
+  
+  .navigation a.active {
+    color: #b8860b;
+    font-weight: 600;
+  }
+  
+  .navigation a.active::before {
+    width: 100%;
+    background: linear-gradient(to right, transparent, #b8860b, transparent);
+  }
+  
+  /* Button styles */
+  .reserve-button {
     border: none;
     padding: 12px 28px;
     border-radius: 50px;
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 1px;
-    background: linear-gradient(135deg, #DAA520 0%, #B8860B 100%);
+    background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
     color: white;
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(218, 165, 32, 0.3);
@@ -105,189 +102,184 @@ body {
     position: relative;
     overflow: hidden;
     z-index: 1;
-}
-
-.reserve-button::before {
+    margin-left: 20px;
+  }
+  
+  .reserve-button::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #B8860B 0%, #DAA520 100%);
+    background: linear-gradient(135deg, #b8860b 0%, #d4af37 100%);
     z-index: -1;
     transition: opacity 0.3s ease;
     opacity: 0;
-}
-
-.reserve-button:hover {
+  }
+  
+  .reserve-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(218, 165, 32, 0.5);
-}
-
-.reserve-button:hover::before {
+  }
+  
+  .reserve-button:hover::before {
     opacity: 1;
-}
-
-.reserve-button:active {
+  }
+  
+  .reserve-button:active {
     transform: translateY(0);
     box-shadow: 0 2px 5px rgba(218, 165, 32, 0.5);
-}
-
-/* Navigation élégante */
-.navigation {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    padding: 20px 0;
-    position: relative;
+  }
+  
+  /* Mobile menu toggle */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
     z-index: 10;
-}
-
-.navigation a {
-    text-decoration: none;
-    color: #333;
-    font-size: 17px;
-    font-weight: 500;
-    position: relative;
-    padding: 5px 0;
-    transition: color 0.3s ease;
-}
-
-.navigation a::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(to right, transparent, #DAA520, transparent);
-    transition: width 0.4s ease;
-}
-
-.navigation a:hover {
-    color: #DAA520;
-}
-
-.navigation a:hover::before {
-    width: 100%;
-}
-
-.navigation a.active {
-    color: #DAA520;
-    font-weight: 600;
-}
-
-.navigation a.active::before {
-    width: 100%;
-    background: linear-gradient(to right, transparent, #DAA520, transparent);
-}
-
-/* Bannière de titre avec effet */
-.title-banner {
-    background: linear-gradient(135deg, #f5f0e6 0%, #f0e6d2 100%);
+  }
+  
+  .menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background-color: #b8860b;
+    margin: 3px 0;
+    border-radius: 3px;
+    transition: 0.3s;
+  }
+  
+  .name h1 {
     font-family: "Italianno", cursive;
-    font-size: 60px;
-    padding: 20px 30px;
-    text-align: center;
-    border-radius: 15px;
-    margin: 40px auto;
-    width: 80%;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(218, 165, 32, 0.2);
+    font-size: 30px;
+    color: #b8860b;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    margin: 0;
+    font-weight: normal;
+  }
+  
+  /* Main content styles */
+  main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
-.title-banner::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    background: linear-gradient(45deg, transparent, rgba(218, 165, 32, 0.1), transparent);
-    animation: shine 3s infinite linear;
-    z-index: 0;
-}
-
-@keyframes shine {
-    0% { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
+.content {
+    flex: 1;
 }
 
 h1 {
-    font-family: 'Tangerine', 'Brush Script MT', cursive;
-    font-size: 48px;
-    color: #5a4a2f;
-    font-weight: normal;
-    margin: 0;
-    position: relative;
-    z-index: 1;
-}
+font-size: 1.5rem;
+color: #8B7355;
+margin-bottom: 2rem;
+text-align: center;
+letter-spacing: -1px;
+line-height: 1.2;
+position: relative;}
 
-/* Galerie de photos spectaculaire */
-.gallery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    flex-wrap: wrap;
-    padding: 30px 40px 50px;
-    perspective: 1000px;
-}
-
-
-/*.gallery {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    padding: 30px 40px 50px;
-    perspective: 1000px;
-   
-}*/
-
-
-.gallery img {
-    width: 280px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 15px;
-    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.8);
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-    position: relative;
+.image-slideshow {
+    flex: 1;
     overflow: hidden;
-    filter: saturate(1.1) brightness(1.05);
 }
 
-.gallery img::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+.slideshow-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
     width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(218, 165, 32, 0.4) 0%, transparent 80%);
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    z-index: 1;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+}
+.slide img {
+    width: 100%;        /* L'image prend toute la largeur du conteneur */
+    height: auto;       /* La hauteur s'ajuste automatiquement pour préserver les proportions */
+    object-fit: cover;  /* L'image remplit l'espace sans se déformer */
+    border-radius: 8px; /* Conserver les coins arrondis */
 }
 
-.gallery img:hover {
-    transform: scale(1.12) translateZ(20px) rotateY(5deg);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 0 15px rgba(218, 165, 32, 0.5);
-    filter: saturate(1.3) brightness(1.1) contrast(1.1);
-    z-index: 2;
-    border-color: rgba(218, 165, 32, 0.5);
+
+
+
+
+/* Assure-toi que la conteneur de l'image prend toute la largeur et n'est pas déformé */
+.image-slideshow {
+    width: 100%;
+    overflow: hidden;
 }
 
-.gallery img:hover::before {
-    opacity: 1;
+.slideshow-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
+.slide {
+    width: 100%;           /* L'image prend toute la largeur du conteneur */
+    height: auto;          /* La hauteur s'ajuste automatiquement pour préserver les proportions */
+    object-fit: cover;     /* L'image couvre toute la zone du conteneur sans déformation */
+    flex-shrink: 0;        /* Empêche les images de se réduire */
+    display: block;        /* Évite un espace sous l'image */
+}
+
+
+
+h1 {
+    color: #1a1a1a;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.description {
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.features {
+    list-style-type: none;
+    margin-bottom: 1.5rem;
+}
+
+.features li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    color: #666;
+}
+
+.features li::before {
+    content: '•';
+    color: #B8860B;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-right: 0.5em;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #B8860B;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #9b7a0d;
+}
 /* Boîtes d'information luxueuses */
 .info-box {
     background: linear-gradient(145deg, #f8f4ec 0%, #f0e6d2 100%);

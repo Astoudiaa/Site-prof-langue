@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dalila RAPOSO - Français Langue étrangère</title>
+    <title>DFrench Class in Paris - Dalila RAPOSO</title>
    
     <link rel="stylesheet" href="./assets/css/petit-dejeuner.css">
     
@@ -16,61 +16,65 @@
 </head>
 <body>
     <header>
+        <div class="header">
+            <div class="logo">
+                <!-- <img src="./assets/img/logo FCIP.Jpeg" alt="Dalila RAPOSO - Français Langue étrangère - Ma vocation, votre apprentissage"> -->
+            </div>
+            <div class="name">
+                <h1>French class in Paris</h1>
+                </div>
+           
+             <!-- Menu de navigation -->
+            <nav class="navigation" id="navigation">
+                <a href="./home.html" >Accueil</a>
+                <a href="./propos.html" >À propos de moi</a>
+                <a href="./services.html">Services</a>
+                <a href="./experiences.html" class="active">Expérience unique</a>
+                <a href="./contact.html">Contact</a>
+            </nav>
 
-        
-    <div class="header">
-        <div class="logo">
-            
-            <img src="./assets/img/logo FCIP.Jpeg" alt="Dalila RAPOSO - Français Langue étrangère - Ma vocation, votre apprentissage">
-
+        <!-- Bouton Réserver à droite -->
+        <button class="reserve-button" onclick="window.location.href='./reservation.html'">Réserver</button>
         </div>
-
-        
-        <button class="reserve-button">Réserver</button>
-
-    </div>
-    <div class="navigation">
-        <a href="./home.html" class="active"> Accueil </a>
-        <a href="./propos.html">À propos de moi</a>
-        <a href="./prestation.html">Prestations - tarifs </a>
-        <a href="./experiences.html" >Expériences unique</a>
-        <a href="./contact.html">Contact</a>
-    </div>
-
-
-    <main>
-        <div class="title-banner"> Cours de français autour d'un petit-dejeuner</div>
-            <h1></h1>
+      </header> 
       
-
-        <p class="experiences"> Venez vivre une expérience unique et détendue pour apprendre le français tout en dégustant
-            un délicieux goûter à deux pas du Louvre et des quais de Seine. Loin des cours classiques,
-            ici, on échange autour d’une délicieuse pâtisserie et d’un bon café dans une ambiance
-            conviviale et authentique.</p>
-
-        <div class="gallery">
-
-            <div class="gallery-item">
-                <img src="./assets/img/Salle-classe.jpeg" alt="Café bibliothèque" class="gallery">
-            </div>
+            <!-- Menu burger
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div> -->
+        
+    <main>
+        <div class="container">
+            <div class="content">
+                <h1>Cours de Francais autour d'un Petit Déjeuner</h1>
+                <p class="description">
+                   Rejoignez-moi pour une expérience unique où, au lieu d’une simple leçon, vous vous immergez dans la langue et la culture françaises autour de croissant frais, de café parfumé, et d'autres délices typiques.
+                   Que vous soyez débutant ou déjà initié, mon approche interactive vous permettra de pratiquer le français de manière naturelle et décontractée. Nous aborderons des sujets de conversation variés, adaptés à votre niveau, le tout dans l'atmosphère charmante du quartier historique de Montmartre.
+                    
+                </p>
             
-            <div class="gallery-item">
-                <img src="./assets/img/cours-gouter.jpeg" alt="Cours à table" class="gallery">
+                <a href="#" class="cta-button"onclick="window.location.href='./reservation.html'">Réserver un petit déjeuner</a></button>
             </div>
-            
-            <div class="gallery-item">
-                <img src="./assets/img/Gouter.jpeg" alt="Pâtisserie et café" class="gallery">
-            </div>
-            
-            <div class="gallery-item">
-                <img src="./assets/img/veranda-exterieur.jpeg" alt="Extérieur du café" class="gallery">
+            <div class="image-slideshow">
+                <div class="slideshow-container">
+                    <img src="./assets/img/cours-petit-dejeuner.jpeg" alt="Petit déjeuner parisien 1" class="slide">
+                    <img src="./assets/img/petit-dejeuner.jpeg" alt="Petit déjeuner parisien 2" class="slide">
+                    <img src="./assets/img/veranda-exterieur.jpeg" alt="Petit déjeuner parisien 3" class="slide">
+                    <img src="./assets/img/cours-petit-dejeuner.jpeg" alt="Petit déjeuner parisien 4" class="slide">
+                    <img src="./assets/img/petit-dejeuner.jpeg" alt="Petit déjeuner parisien 5" class="slide">
+                    <img src="./assets/img/veranda-exterieur.jpeg" alt="Petit déjeuner parisien 6" class="slide">
+                    <img src="./assets/img/cours-petit-dejeuner.jpeg" alt="Petit déjeuner parisien 1" class="slide">
+                    <img src="./assets/img/petit-dejeuner.jpeg" alt="Petit déjeuner parisien 2" class="slide">
+                    <img src="./assets/img/veranda-exterieur.jpeg" alt="Petit déjeuner parisien 3" class="slide">
+                </div>
             </div>
         </div>
-
-        <p> Peu importe votre niveau, je vous accompagne pour discuter, tout en apprenant la langue de
+         <!-- <p> Peu importe votre niveau, je vous accompagne pour discuter, tout en apprenant la langue de
             manière naturelle. Le tout, dans un cadre chaleureux et plein de charme, au cœur de Paris.
             Une manière agréable et différente de pratiquer le français tout en découvrant les saveurs
-            et l’atmosphère de Paris.</p>
+            et l’atmosphère de Paris.</p> -->
             
         <div class="info-box">
             <p class="info-title">Durée de l'expérience : 2 heures</p>
@@ -82,9 +86,9 @@
             <p>En solo ou en petit groupe de 4 personnes maximum. Remise de 10 % à partir de 3 personnes.</p>
         </div>
 
-       
+    
     </main>
+<script src="./js/petit-dej.js"></script>
 
-</header>
 </body>
 </html>

@@ -1,203 +1,98 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/experiences.css?v=1.1">
-    <style>
-        .carousel-slide {
-
-            height: 500px !important ;
-            width: 300px !important;
-        }
-    </style>
-       <style>
-        @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
-        </style>
-
+    <title>French Class in Paris - Dalila RAPOSO</title>
+    <link rel="stylesheet" href="./assets/css/experiences.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italianno&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Italiana&family=Italianno&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
 </head>
 <body>
-  <header>
-    <div class="header">
-        <div class="logo">
-            <!-- <img src="./assets/img/logo FCIP.Jpeg" alt="Dalila RAPOSO - Français Langue étrangère - Ma vocation, votre apprentissage"> -->
+    <header>
+        <div class="header">
+            <div class="logo">
+                <!-- <img src="./assets/img/logo FCIP.Jpeg" alt="Dalila RAPOSO - Français Langue étrangère - Ma vocation, votre apprentissage"> -->
+            </div>
+            <div class="name">
+                <h1>French class in Paris</h1>
+                </div>
+           
+             <!-- Menu de navigation -->
+            <nav class="navigation" id="navigation">
+                <a href="./home.html" >Accueil</a>
+                <a href="./propos.html" >À propos de moi</a>
+                <a href="./services.html">Services</a>
+                <a href="./experiences.html"class="active">Expérience unique</a>
+                <a href="./contact.html">Contact</a>
+            </nav>
+
+        <!-- Bouton Réserver à droite -->
+        <button class="reserve-button" onclick="window.location.href='./reservation.html'">Réserver</button>
         </div>
-        <div class="name">
-            <h1>French class in Paris</h1>
-        </div>
-    <nav class="navigation" id="navigation"> 
-        <a href="./home.html">Accueil</a>
-        <a href="./propos.html">À propos de moi</a>
-        <a href="./experiences.html" class="active">Expériences unique</a>
-        <a href="./prestation.html">Prestations - tarifs </a>
-        <a href="./contact.html">Contact</a>
+      </header> 
+      
+            <!-- Menu burger
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div> -->
         
-    </nav>
- <!-- Bouton Réserver à droite -->
-<button class="reserve-button">Réserver</button>
-</header>
-
- <!-- Menu burger
- <div class="menu-toggle" id="menu-toggle">
-  <span href="./home.html"></span>
-  <span ref="./propos.html"> </span>
-  <span href="./prestation.html"></span>
-  <span href="./contact.html"></span>
-</div> -->
-
-<div class="text-container">
-  <p>Rejoignez-moi pour une expérience unique ! </p>
-</div>
+  
+    <main>
 
 <div class="text-acceuil">
-  <h1>Expériences lors de votre séjour à Paris</h1>
-  <h2> Un moment convivial et enrichissant qui allie apprentissage, culture et gastronomie
-    française.
- </h2>
+    <h1>Expériences lors de votre séjour à Paris</h1>
+    <h2>Un moment convivial et enrichissant qui allie apprentissage, culture et gastronomie française.</h2>
   
-  <hr>
+    <p>Découvrez le monde raffiné de l'enseignement, découvrez des Cours de français au cours d’un petit-déjeuner et Cours de français autour d’un goûter.</p>
   
-  <p><strong>Découvrez le monde raffiné de l'enseignement</strong>, Decouvrez des <em> Cours de français au cours d’un petit-déjeuner</em> et <em>Cours de français autour d’un goûter</em>.</p>
+    <p>Que vous soyez débutant ou déjà initié, mon approche interactive vous permettra de pratiquer le français de manière naturelle et décontractée. 
+       Nous aborderons des sujets de conversation variés.
+    </p>
   
-  <p>Que vous soyez débutant ou déjà initié, mon approche interactive vous permettra de pratiquer le français de manière naturelle et décontractée. 
-     Nous aborderons des sujets de conversation
-    variés
-   
-  <hr>
+    <p class="accroche">Transformez votre potentiel en réussite concrète</p>
+  </div>
   
-  <p class="accroche">Transformez votre potentiel en réussite concrète</p>
-</div>
-
-    <div class="container">
-        <div class="bg-circle"></div>
-        <div class="carousel-container"  h>
-          <button class="slider-nav prev" id="prev"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-         <path d="M15 6l-6 6l6 6"></path>
-      </svg></button>
-          <button class="slider-nav next" id="next"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-         <path d="M9 6l6 6l-6 6"></path>
-      </svg></button>
-          <div class="carousel-wrapper">
-            <div class="carousel" >
-              <div class="carousel-slide"       tabindex="0" data-image-src="./assets/img/petit-dejeuner.jpeg">
-                <div class="carousel-content">
-        
-                </div>
-              </div>
-              <div class="carousel-slide" tabindex="0" data-image-src="./assets/img/cours-gouter.jpeg">
-                <div class="carousel-content">
-                  
-                </div>
-              </div>
-              <div class="carousel-slide" tabindex="0"  data-image-src="./assets/img/veranda-exterieur.jpeg">
-                <div class="carousel-content">
-                  
-                  
-                </div>
-              </div>
-              <div class="carousel-slide" tabindex="0" data-image-src="./assets/img/dalila-brunch.jpeg">
-                <div class="carousel-content">
-                  
-                </div>
-              </div>
-              <div class="carousel-slide" tabindex="0" data-image-src="./assets/img/cours-petit-dejeuner.jpeg">
-                <div class="carousel-content">
-                  
-                </div>
-              </div>
-              <div class="carousel-slide" tabindex="0" data-image-src="./assets/img/Gouter.jpeg">
-                <div class="carousel-content">
-                 
-                </div>
-              </div>
-              <div class="carousel-slide" tabindex="0" data-image-src="./assets/img/veranda-exterieur.jpeg">
-                <div class="carousel-content">
-                 
-                </div>
-              </div>
-              <div class="carousel-slide" tabindex="0" data-image-src="./assets/img/Salle-classe.jpeg">
-                <div class="carousel-content">
-                
-                </div>
-              </div>
-              <div class="carousel-slide" tabindex="0" data-image-src="./assets/img/petit-dejeuner.jpeg">
-                <div class="carousel-content">
-                 
-                </div>
-              </div>
-              <div class="carousel-slide" tabindex="0" data-image-src="./assets/img/cours-individuel.jpeg">
-                <div class="carousel-content">
-                  
-                </div>
-              </div>
-              <div class="carousel-slide" tabindex="0" data-image-src="./assets/img/cathedrale.jpeg">
-                <div class="carousel-content">
-                 
-                </div>
-              </div>
-              <div class="carousel-slide" tabindex="0" data-image-src="./assets/img/petit-dejeuner.jpeg">
-                <div class="carousel-content">
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-scrollbar">
-            <div class="scrollbar-track">
-              <div class="scrollbar-thumb"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+  <div class="text-container">
+    <p>Rejoignez-moi pour une expérience unique ! </p>
+  </div>
       
     </body>
 
-    <script src="./js/caroussel.js"></script>
+   <!--   <script src="./js/caroussel.js"></script> -->
 
     </html>
     <div class="tasse-container">
-      <img src="./assets/img/tea.webp" alt="Logo" class="image-tasse">
+     <!--  <img src="./assets/img/tea.webp" alt="Logo" class="image-tasse"> -->
   </div>
 
     <footer class="footer">
-      <h2 class="footer-title">Découvrez nos services</h2>
+      <!--    <h2 class="footer-title">Expériences Culturelles</h2>-->
       <p class="footer-subtitle">Immergez-vous dans la culture française lors de nos petits-déjeuners et goûters conviviaux</p>
 
       <div class="footer-cards">
           <div class="card">
               <img src="./assets/img/petit-dejeuner.jpeg" alt="Petit-déjeuner parisien">
-              <h3>Petit-déjeuner parisien</h3>
+              <h3>Petit-déjeuner typique parisien</h3>
               <p>Découvrez l'art de parler français tout en savourant un délicieux petit déjeuner dans un cadre intime et authentique près de Montmartre. </p>
-              <a href="/petit-dejeuner.html">En savoir plus →</a>
+              <a href="/petit-dejeuner.html">En savoir plus → </a>
           </div>
           <div class="card">
               <img src="./assets/img/Gouter.jpeg" alt="Goûter culturel">
               <h3>Goûter culturel</h3>
-              <p> Apprenez le français tout en dégustant un délicieux goûter à deux pas du Louvre</p>
-              <a href="/gouter.html">En savoir plus →</a>
+              <p>Vivez un moment convivial et enrichissant qui allie apprentissage, culture et gastronomie française.</p>
+              <a href="/gouter.html">En savoir plus → </a>
           </div>
           <div class="card">
               <img src="./assets/img/Salle-classe.jpeg" alt="Bibliothèque cosy">
-              <h3>Rencontres & Culture</h3>
+              <h3>Rencontres, Conversations & Culture</h3>
               <p>Profitez d’un cadre chaleureux pour discuter et enrichir vos connaissances.</p>
-              <a href="/gouter.html">En savoir plus →</a>
+              <a href="/gouter.html">En savoir plus → </a>
           </div>
       </div>
-
-      <div class="footer-bottom">
-          <p>© 2025 Ton Nom / Entreprise. Tous droits réservés.</p>
-          <div class="footer-links">
-              <a href="#">Mentions légales</a>
-              <a href="#">Politique de confidentialité</a>
-              <a href="#">Contact</a>
-          </div>
-      </div>
-  
 
     <p>Contactez-moi : <a href="mailto:dalila@example.com">dalila@example.com</a></p>
     <p>&copy; 2025 Dalila RAPOSO - Tous droits réservés</p>

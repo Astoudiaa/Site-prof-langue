@@ -1,0 +1,89 @@
+    mon carroussel voir par page css : expériences.css 
+
+    
+    
+    
+    
+    <div class="container">
+        <div class="bg-circle"></div>
+        <div class="carousel-container"  h>
+          <button class="slider-nav prev" id="prev"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+         <path d="M15 6l-6 6l6 6"></path>
+      </svg></button>
+          <button class="slider-nav next" id="next"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+         <path d="M9 6l6 6l-6 6"></path>
+      </svg></button>
+          <div class="carousel-wrapper">
+            <div class="carousel" >
+              <div class="carousel-slide"       tabindex="0" data-image-src="./assets/img/petit-dejeuner.jpeg">
+                <div class="carousel-content">
+        
+                </div>
+              </div>
+              <div class="carousel-slide" tabindex="0" data-image-src="./assets/img/cours-gouter.jpeg">
+                <div class="carousel-content">
+                  
+                </div>
+              </div>
+              <div class="carousel-slide" tabindex="0"  data-image-src="./assets/img/veranda-exterieur.jpeg">
+                <div class="carousel-content">
+                  
+                  
+                </div>
+              </div>
+              <div class="carousel-slide" tabindex="0" data-image-src="./assets/img/dalila-brunch.jpeg">
+                <div class="carousel-content">
+                  
+                </div>
+              </div>
+              <div class="carousel-slide" tabindex="0" data-image-src="./assets/img/cours-petit-dejeuner.jpeg">
+                <div class="carousel-content">
+                  
+                </div>
+              </div>
+              <div class="carousel-slide" tabindex="0" data-image-src="./assets/img/Gouter.jpeg">
+                <div class="carousel-content">
+                 
+                </div>
+              </div>
+              <div class="carousel-slide" tabindex="0" data-image-src="./assets/img/veranda-exterieur.jpeg">
+                <div class="carousel-content">
+                 
+                </div>
+              </div>
+              <div class="carousel-slide" tabindex="0" data-image-src="./assets/img/Salle-classe.jpeg">
+                <div class="carousel-content">
+                
+                </div>
+              </div>
+              <div class="carousel-slide" tabindex="0" data-image-src="./assets/img/petit-dejeuner.jpeg">
+                <div class="carousel-content">
+                 
+                </div>
+              </div>
+              <div class="carousel-slide" tabindex="0" data-image-src="./assets/img/cours-individuel.jpeg">
+                <div class="carousel-content">
+                  
+                </div>
+              </div>
+              <div class="carousel-slide" tabindex="0" data-image-src="./assets/img/cathedrale.jpeg">
+                <div class="carousel-content">
+                 
+                </div>
+              </div>
+              <div class="carousel-slide" tabindex="0" data-image-src="./assets/img/petit-dejeuner.jpeg">
+                <div class="carousel-content">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-scrollbar">
+            <div class="scrollbar-track">
+              <div class="scrollbar-thumb"></div>
+            </div>
+          </div>
+        </div>
+      </div>

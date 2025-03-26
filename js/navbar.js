@@ -1,30 +1,27 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.getElementById('menu-toggle');
-    const navigation = document.getElementById('navigation');
-    
-    if (menuToggle && navigation) {
-      menuToggle.addEventListener('click', function() {
-        navigation.classList.toggle('active');
-      });
-    }
-    
-    // Close menu when clicking outside
-    document.addEventListener('click', function(event) {
-      if (!navigation.contains(event.target) && !menuToggle.contains(event.target) && navigation.classList.contains('active')) {
-        navigation.classList.remove('active');
-      }
-    });
-    
-    // Set active link based on current page
-    const currentPage = window.location.pathname.split('/').pop();
-    const navLinks = document.querySelectorAll('.navigation a');
-    
-    navLinks.forEach(link => {
-      const linkPage = link.getAttribute('href').split('/').pop();
-      if (currentPage === linkPage || (currentPage === '' && linkPage === './home.html')) {
-        link.classList.add('active');
+window.addEventListener("scroll", function() {
+  const navbar = document.getElementById("navigation");
+  if (window.scrollY > 50) {
+      navbar.classList.add("scrolled"); // Ajoute la classe au scroll
+  } else {
+      navbar.classList.remove("scrolled"); // Retire la classe en haut de page
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const nav = document.getElementById("navigation");
+  const heroBg = document.querySelector(".hero-bg");
+
+  window.addEventListener("scroll", function () {
+      let scrollValue = window.scrollY;
+
+      // Effet de déplacement de l'image
+      heroBg.style.transform = `translateY(${scrollValue * 0.5}px)`;
+
+      // Modification de la navbar au scroll
+      if (scrollValue > 50) {
+          nav.classList.add("scrolled");
       } else {
-        link.classList.remove('active');
+          nav.classList.remove("scrolled");
       }
-    });
   });
+});

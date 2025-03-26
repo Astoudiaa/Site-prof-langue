@@ -10,12 +10,15 @@ body {
   
   /* Header with transparent background */
   header {
-    position: absolute;
+    position: fixed;
     width: 100%;
-    z-index: 100;
     top: 0;
     left: 0;
-  }
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: none; /* Supprime le flou du header */
+    transition: background-color 0.3s ease;
+}
   
   /* Navigation styles with transparent background */
   .navigation {
@@ -24,9 +27,8 @@ body {
     justify-content: center;
     padding: 20px 0;
     background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(5px);
-  }
-  
+    backdrop-filter: none; /* Supprime le flou de la navigation */
+}
   .navigation a {
     text-decoration: none;
     color: white;
@@ -66,7 +68,16 @@ body {
     width: 100%;
     background: linear-gradient(to right, transparent, #d4af37, transparent);
   }
-  
+  .logo img {
+    width: 60px; /* Taille réduite du logo */
+    height: auto; /* Garde les proportions */
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    background-color: #000; /* Fond noir temporaire pour voir le logo */
+
+}
+
   /* Menu toggle for mobile */
   .menu-toggle {
     display: none;
@@ -95,9 +106,9 @@ body {
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center;
     color: white;
     text-align: center;
+    margin-top: -20px;
   }
   
   .hero-bg {
@@ -106,7 +117,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../img/tour-eiffeil.jpg');
+    background-image: url('../img/pont-alexandre.jpg');
     background-size: cover;
     background-position: center;
     filter: brightness(0.7);
@@ -122,7 +133,8 @@ body {
   
   .hero-title {
     font-family: 'Cinzel', serif;
-    font-size: 4rem;
+    font-size: 3rem;
+    color:  #c39e0d;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   }
@@ -131,6 +143,8 @@ body {
     font-family: 'Italiana', serif;
     font-size: 1.5rem;
     margin-bottom: 2rem;
+    margin-top: -20px;
+    color:#c39e0d;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
   }
   
@@ -165,13 +179,20 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: -50px; /* Déplace la section vers le haut */
   }
-  
   .quote {
     font-family: "Italianno", cursive;
     font-weight: 400;
     font-style: normal;
     font-size: 60px;
+    line-height: 1.2; /* Optionnel : resserrer l'espacement entre les lignes pour une meilleure lisibilité */
+  }
+  .quote-ligne {
+    font-style: italic;
+    font-size: 1.2em;
+    line-height: 1.2;
+    margin-top: 10px; /* Ajouter de l'espace entre la citation et la ligne */
   }
   
   .author {
@@ -185,7 +206,8 @@ body {
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin-top: 150px;
+    margin-top: -50px; 
+    padding: 20px 0;
   }
   
   .gallery-item {
@@ -195,6 +217,9 @@ body {
     text-align: center;
     padding: 20px;
     border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s ease;
   }
   
   .gallery-image {
