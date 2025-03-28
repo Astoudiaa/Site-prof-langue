@@ -1,0 +1,43 @@
+<header>
+    <div class="header">
+        <div class="logo">
+          <!--  <img src="/assets/img/logoFCIP.Jpeg" alt="Dalila RAPOSO - Français Langue étrangère - Ma vocation, votre apprentissage">-->
+        </div>
+        <div class="name">
+            <h1>French class in Paris</h1>
+        </div>
+        
+        <nav class="navigation" id="navigation">
+            <a href="/home" <%= page === 'home' ? 'class="active"' : '' %>>Accueil</a>
+            <a href="/about" <%= page === 'propos' ? 'class="active"' : '' %>>À propos de moi</a>
+            <a href="/services" <%= page === 'services' ? 'class="active"' : '' %>>Services</a>
+            <a href="/experiences" <%= page === 'experiences' ? 'class="active"' : '' %>>Expérience unique</a>
+            <a href="/contact" <%= page === 'contact' ? 'class="active"' : '' %>>Contact</a>
+            <a href="/petit-dejeuner" <%= page === 'petit-dejeuner' ? 'class="active"' : '' %>></a>
+            <a href="/contact" <%= page === 'contact' ? 'class="active"' : '' %>></a>
+            <a href="/cours-individuel" <%= page === 'cours-individuel' ? 'class="active"' : '' %>></a>
+
+        </nav>
+        
+        <!-- Bouton Réserver à droite -->
+        <button class="reserve-button" onclick="window.location.href='/reservation'">Réserver</button>
+
+        <form action="/lang" method="GET">
+          <select name="lang" onchange="window.location.href='/lang/' + this.value;">
+              <option value="fr">🇫🇷 Français</option>
+              <option value="en">🇬🇧 English</option>
+              <option value="es">🇪🇸 Español</option>
+              <option value="pt">🇵🇹 Português</option>
+          </select>
+      </form>
+        
+     <!-- Menu burger -->
+     <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  
+      <script src="/js/navbar.js"></script> <!-- Inclure le script JS -->
+    </header>
+    

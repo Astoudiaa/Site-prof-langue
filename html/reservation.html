@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>French Class in Paris - Dalila RAPOSO</title>
+  <link rel="stylesheet" href="./assets/css/reservation.css?v=1.1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italianno&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Italiana&family=Italianno&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="logo">
+                <!-- <img src="./assets/img/logo FCIP.Jpeg" alt="Dalila RAPOSO - Français Langue étrangère - Ma vocation, votre apprentissage"> -->
+            </div>
+            <div class="name">
+                <h1>French class in Paris</h1>
+                </div>
+           
+             <!-- Menu de navigation -->
+            <nav class="navigation" id="navigation">
+                <a href="./home.html" >Accueil</a>
+                <a href="./propos.html">À propos de moi</a>
+                <a href="./services.html" >Services</a>
+                <a href="./experiences.html">Expérience unique</a>
+                <a href="./contact.html">Contact</a>
+            </nav>
+
+        <!-- Bouton Réserver à droite -->
+        <button class="reserve-button" onclick="window.location.href='./reservation.html'">Réserver</button>
+        </div>
+      </header>  
+
+            <!-- Menu burger
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div> -->
+        
+    <main>
+<section>
+        <div class="container">
+            <h1>Découvrez nos services</h1>
+            <p>Réservez votre cours ou expérience culturelle en quelques clics</p>
+        </div>
+        <section>
+    <main class="container">
+        <section class="services-section">
+            <div class="section-header">
+                <i class="fas fa-graduation-cap"></i>
+                <h2>Choisissez votre service</h2>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Cours Particulier</h3>
+                    <div class="service-details">
+                        <p><i class="far fa-clock"></i> 1h30</p>
+                        <p><i class="fas fa-euro-sign"></i> 60€</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Cours en Groupe</h3>
+                    <div class="service-details">
+                        <p><i class="far fa-clock"></i> 2h</p>
+                        <p><i class="fas fa-euro-sign"></i> 35€</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <h3>Petit-déjeuner Culturel</h3>
+                    <div class="service-details">
+                        <p><i class="far fa-clock"></i> 2h</p>
+                        <p><i class="fas fa-euro-sign"></i> 45€</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <h3>Gouter Culturel</h3>
+                    <div class="service-details">
+                        <p><i class="far fa-clock"></i> 2h</p>
+                        <p><i class="fas fa-euro-sign"></i> 45€</p>
+                    </div>
+            </div>
+        </section>
+        
+        <section class="date-time-section">
+            <div class="section-header">
+                <i class="far fa-calendar-alt"></i>
+                <h2>Date et heure</h2>
+            </div>
+            
+            <div class="date-time-grid">
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" placeholder="jj/mm/aaaa">
+                </div>
+                
+                <div class="form-group">
+                    <label for="time">Heure</label>
+                    <select id="time">
+                        <option selected disabled>Sélectionnez une heure</option>
+                        <option>09:00</option>
+                        <option>10:00</option>
+                        <option>11:00</option>
+                        <option>14:00</option>
+                        <option>15:00</option>
+                        <option>16:00</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+        
+        <section class="participants-section">
+            <div class="section-header">
+                <i class="fas fa-user-friends"></i>
+                <h2>Participants</h2>
+            </div>
+            
+            <div class="participants-counter">
+                <button class="counter-btn minus-btn">-</button>
+                <span class="counter-value">1</span>
+                <button class="counter-btn plus-btn">+</button>
+            </div>
+        </section>
+
+        <section class="participants-section">
+            <div class="section-header">
+                <i class="fas fa-envelope"></i>
+                <h2>Entrez votre email</h2>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Adresse email</label>
+                <input type="email" id="email" placeholder="Entrez votre email" required>
+            </div>
+        </section>
+        
+        <section class="payment-section">
+            <div class="section-header">
+                <i class="fas fa-credit-card"></i>
+                <h2>Paiement</h2>
+            </div>
+            
+            <div class="payment-summary">
+                <div class="summary-row">
+                    <span>Service</span>
+                    <span>-</span>
+                </div>
+                <div class="summary-row">
+                    <span>Date</span>
+                    <span>-</span>
+                </div>
+                <div class="summary-row">
+                    <span>Heure</span>
+                    <span>-</span>
+                </div>
+                <div class="summary-row">
+                    <span>Participants</span>
+                    <span>1</span>
+                </div>
+                <div class="summary-row total-row">
+                    <span>Total</span>
+                    <span>-</span>
+                </div>
+            </div>
+            
+            
+            <button class="payment-btn">
+                <i class="fas fa-credit-card"></i>
+                Procéder au paiement
+            </button>
+        </section>
+        
+        <section class="testimonials-section">
+            <div class="section-header">
+                <h2>Témoignages</h2>
+                <p>Ce que nos étudiants disent de leur expérience</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-profile">
+                        <div class="testimonial-avatar"></div>
+                        <div class="testimonial-info">
+                            <h3>Sophie Anderson</h3>
+                            <p>Expatriée américaine</p>
+                        </div>
+                    </div>
+                    <blockquote>
+                        "Les cours m'ont permis d'atteindre rapidement un niveau me permettant de travailler en français. L'approche personnalisée a fait toute la différence."
+                    </blockquote>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-profile">
+                        <div class="testimonial-avatar"></div>
+                        <div class="testimonial-info">
+                            <h3>Marco Rossi</h3>
+                            <p>Étudiant en ligne</p>
+                        </div>
+                    </div>
+                    <blockquote>
+                        "Même à distance, j'ai pu progresser efficacement grâce aux cours en ligne. Le suivi est excellent et les exercices sont très pertinents."
+                    </blockquote>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-profile">
+                        <div class="testimonial-avatar"></div>
+                        <div class="testimonial-info">
+                            <h3>Yuki Tanaka</h3>
+                            <p>Participante aux événements culturels</p>
+                        </div>
+                    </div>
+                    <blockquote>
+                        "Les petits-déjeuners culturels sont une excellente façon de pratiquer le français dans un cadre authentique et convivial."
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Services de Cours de Français. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Service card selection
+            const serviceCards = document.querySelectorAll('.service-card');
+            serviceCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    serviceCards.forEach(c => c.classList.remove('selected'));
+                    this.classList.add('selected');
+                    
+                    // Update payment summary
+                    const serviceName = this.querySelector('h3').textContent;
+                    const servicePrice = this.querySelector('.service-details p:last-child').textContent;
+                    
+                    document.querySelector('.payment-summary .summary-row:first-child span:last-child').textContent = serviceName;
+                    updateTotal();
+                });
+            });
+            
+            // Participant counter
+            const minusBtn = document.querySelector('.minus-btn');
+            const plusBtn = document.querySelector('.plus-btn');
+            const counterValue = document.querySelector('.counter-value');
+            
+            minusBtn.addEventListener('click', function() {
+                let value = parseInt(counterValue.textContent);
+                if (value > 1) {
+                    counterValue.textContent = value - 1;
+                    document.querySelector('.payment-summary .summary-row:nth-child(4) span:last-child').textContent = value - 1;
+                    updateTotal();
+                }
+            });
+            
+            plusBtn.addEventListener('click', function() {
+                let value = parseInt(counterValue.textContent);
+                counterValue.textContent = value + 1;
+                document.querySelector('.payment-summary .summary-row:nth-child(4) span:last-child').textContent = value + 1;
+                updateTotal();
+            });
+            
+            // Date and time selection
+            const dateInput = document.getElementById('date');
+            const timeSelect = document.getElementById('time');
+            
+            dateInput.addEventListener('change', function() {
+                const formattedDate = new Date(this.value).toLocaleDateString('fr-FR');
+                document.querySelector('.payment-summary .summary-row:nth-child(2) span:last-child').textContent = formattedDate;
+            });
+            
+            timeSelect.addEventListener('change', function() {
+                document.querySelector('.payment-summary .summary-row:nth-child(3) span:last-child').textContent = this.value;
+            });
+            
+            // Update total
+            function updateTotal() {
+                const selectedService = document.querySelector('.service-card.selected');
+                const participants = parseInt(document.querySelector('.counter-value').textContent);
+                
+                if (selectedService) {
+                    const priceText = selectedService.querySelector('.service-details p:last-child').textContent;
+                    const price = parseInt(priceText.match(/\d+/)[0]);
+                    const total = price * participants;
+                    
+                    document.querySelector('.total-row span:last-child').textContent = total + '€';
+                }
+            }
+        });
+
+     
+document.addEventListener('DOMContentLoaded', function() {
+  const reserveButton = document.querySelector('.payment-btn');
+  
+  reserveButton.addEventListener('click', function() {
+    const serviceName = document.querySelector('.service-card.selected h3').textContent;
+    const servicePrice = document.querySelector('.service-card.selected .service-details p:last-child').textContent;
+    const date = document.getElementById('date').value;
+    const time = document.getElementById('time').value;
+    const participants = document.querySelector('.counter-value').textContent;
+    const userEmail = prompt("Entrez votre adresse e-mail:");
+
+    const reservationData = {
+      email: userEmail,
+      service: serviceName,
+      date: date,
+      time: time,
+      participants: participants
+    };
+
+    // Envoyer la réservation à l'API
+    fetch('/reserve', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(reservationData)
+    })
+    .then(response => response.text())
+    .then(data => {
+      alert('Votre réservation a été confirmée!');
+    })
+    .catch(error => {
+      console.error('Erreur lors de la réservation:', error);
+    });
+  });
+});
+
+</script>
+<script src="./js/reservation.js"></script>
+  
+    </main>
+</body>
+
+</html>
